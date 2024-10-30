@@ -1,0 +1,70 @@
+/* Signup.css */
+
+.signup-container {
+  width: 400px;
+  background-color: #2b2b2b; /* Darker background */
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5); /* Softer shadow for dark mode */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  padding: 20px;
+}
+
+.signup-container h2 {
+  text-align: center;
+  color: #ffffff; /* Light text color */
+}
+
+.signup-container input {
+  border-radius: 4px;
+  border: 1px solid #555; /* Darker border */
+  background: #444; /* Dark input background */
+  color: #ffffff; /* Light input text color */
+  outline: none;
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.signup-container input.error {
+  border: 1px solid #ff6b6b; /* Error color in dark mode */
+}
+
+.signup-container p .error {
+  color: #ff6b6b;
+  font-size: 12px;
+}
+
+.signup-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #004d40; /* Accent color for button */
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.signup-container button:hover {
+  background-color: #004d40;
+}
+
+.signup-container .links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.signup-container .links a {
+  color: #1e90ff; /* Link color to match button */
+  text-decoration: none;
+}
+
+.success {
+  color: #4caf50;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
