@@ -3,6 +3,7 @@ import axiosInstance from '../../utils/axiosInstance';
 import '../../assets/styles/Signup.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
     const [email, setEmail] = useState('');
@@ -10,6 +11,7 @@ const Signup = () => {
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
+    const navigate = useNavigate();
 
     const handleSignup = async (e: any) => {
         e.preventDefault();
@@ -28,8 +30,10 @@ const Signup = () => {
             });
 
             setSuccessMessage('Account created successfully!');
-            toast.success('Account created successfully!'); // Toast for success message
-            console.log(response.data); // Handle response as needed
+            toast.success('Account created successfully!');
+            setTimeout(() => {
+                navigate("/login")
+            }, 2000)
         } catch (error: any) {
             setSuccessMessage('');
             if (error.response && error.response.data && error.response.data.message) {

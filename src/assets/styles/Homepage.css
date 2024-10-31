@@ -1,4 +1,8 @@
-/* Dark theme styles */
+.icons {
+    margin-left: 10px;
+}
+
+
 .homepage-container {
     max-width: 1200px;
     margin: auto;
@@ -15,6 +19,24 @@ h2 {
     font-size: 1.8rem;
 }
 
+.head {
+    display: flex;
+    flex-direction: row;
+}
+.head h2 {
+    flex: 1;
+    text-align: left;;
+}
+.head button {
+    background-color: #f53434; /* Accent color for button */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    height: 60px;
+    margin-top: 8px;
+}
 .task-columns {
     display: flex;
     gap: 20px;
@@ -102,4 +124,60 @@ h2 {
 
 .task-actions svg:hover {
     color: #80cbc4;
+}
+
+.new-task-modal {
+    background: #333333;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.new-task-modal .body {
+    width: 400px;
+    margin: auto;
+}
+
+.new-task-modal .title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.new-task-modal .title h2 {
+    flex: 2;
+    text-align: left;
+}
+
+.new-task-modal .title button {
+    color: #f53434;
+    background: transparent;
+    border: 0;
+    font-size: 32px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.new-task-modal form input,
+.new-task-modal form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #b0bec5;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    outline: 0;
+    background: #2c2c2c;
+}
+
+.new-task-modal form button {
+    background-color: #00796b;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
 }
