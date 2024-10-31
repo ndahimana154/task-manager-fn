@@ -97,20 +97,20 @@ const Homepage = () => {
         }
     };
 
-    const handleDeleteTask = async (taskId: string) => {
-        setLoading(true);
-        try {
-            await axiosInstance.delete(`/api/task/${taskId}`, {
-                headers: { Authorization: `Bearer ${token}` },
-            });
-            await fetchTasks()
-            toast.success("Task deleted successfully.");
-        } catch (error) {
-            toast.error("Failed to delete task.");
-        } finally {
-            setLoading(false);
-        }
-    };
+    // const handleDeleteTask = async (taskId: string) => {
+    //     setLoading(true);
+    //     try {
+    //         await axiosInstance.delete(`/api/task/${taskId}`, {
+    //             headers: { Authorization: `Bearer ${token}` },
+    //         });
+    //         await fetchTasks()
+    //         toast.success("Task deleted successfully.");
+    //     } catch (error) {
+    //         toast.error("Failed to delete task.");
+    //     } finally {
+    //         setLoading(false);
+    //     }
+    // };
 
     const handleOpenUpdateModal = (_id: String, title: String, description: String) => {
         set_id(_id);

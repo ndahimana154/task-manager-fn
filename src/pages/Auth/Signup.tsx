@@ -10,7 +10,7 @@ const Signup = () => {
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
-    const [successMessage, setSuccessMessage] = useState('');
+    // const [successMessage, setSuccessMessage] = useState('');
     const navigate = useNavigate();
 
     const handleSignup = async (e: any) => {
@@ -24,18 +24,18 @@ const Signup = () => {
         if (!email || !password) return;
 
         try {
-            const response = await axiosInstance.post('api/auth/register', {
+            await axiosInstance.post('api/auth/register', {
                 email,
                 password,
             });
 
-            setSuccessMessage('Account created successfully!');
+            // setSuccessMessage('Account created successfully!');
             toast.success('Account created successfully!');
             setTimeout(() => {
                 navigate("/login")
             }, 2000)
         } catch (error: any) {
-            setSuccessMessage('');
+            // setSuccessMessage('');
             if (error.response && error.response.data && error.response.data.message) {
                 toast.error(error.response.data.message);
             } else {
