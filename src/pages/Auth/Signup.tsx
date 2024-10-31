@@ -3,7 +3,7 @@ import axiosInstance from '../../utils/axiosInstance';
 import '../../assets/styles/Signup.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Signup = () => {
     const [email, setEmail] = useState('');
@@ -73,7 +73,7 @@ const Signup = () => {
                     <div className="links">
                         <p>
                             Already have an account?
-                            <a href="/">Sign In</a>
+                            <Link to="/">Sign In</Link>
                         </p>
                     </div>
                 </form>
